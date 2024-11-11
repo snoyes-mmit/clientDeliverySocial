@@ -1,0 +1,304 @@
+/* HOMEPAGE */
+
+body.loggedin {
+	background-color: rgb(135 195 233 / 23%);
+	line-height: 1.4;
+}
+
+.content {
+	max-width: 1400px;
+	margin: 0 auto;
+}
+
+.content h2 {
+	margin: 0;
+	padding: 25px 0;
+	font-size: 22px;
+	color: #4a536e;
+}
+
+.item {
+  border: 1px solid rgba(135,195,233, .2);
+  border-radius: 5px;
+  padding: 15px;
+  background-color: whitesmoke;
+  /* box-shadow: 6px 5px 15px #f2f0ef; */
+}
+
+.grid .item:nth-child(1) {
+  grid-area: hero;
+}
+
+.grid .item:nth-child(2) {
+  grid-area: aside2;
+}
+
+.grid .item:nth-child(3) {
+  grid-area: aside3;
+}
+
+.grid .item:nth-child(4) {
+  grid-area: aside4;
+}
+
+.grid .item:nth-child(5) {
+  grid-area: aside5;
+}
+
+.grid {
+  width: 100%;
+  max-width: 1400px;
+  /* height: 1000px; */
+  display: grid;
+  gap: 1.5vw;
+  padding: 1vw;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas:
+	"hero hero hero hero aside2 aside2"
+	"hero hero hero hero aside2 aside2"
+	"aside3 aside3 aside4 aside4 aside5 aside5"
+	"aside3 aside3 aside4 aside4 aside5 aside5";
+}
+
+@media screen and (max-width: 1058px) {
+  .grid {
+		padding: 1vw 0 !important;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+		"hero   hero   hero   hero"
+		"hero   hero   hero   hero"
+		"aside2 aside2 aside2 aside3"
+		"aside4 aside4 aside5 aside5";
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      "hero   hero   hero"
+      "hero   hero   hero"
+      "aside2 aside2 aside2"
+      "aside3 aside3 aside3"
+      "aside4 aside4 aside4"
+      "aside5 aside5 aside5";
+			padding: 0 !important;
+  }
+
+}
+
+
+.topnav {
+  background-color: #001e43;
+	width: 100%;
+}
+
+.topnav a {
+  float: right;
+  display: block;
+	direction: rtl;
+  color: #c1c4c8;;
+  text-align: center;
+  padding: 14px 16px;
+	margin-top: 8px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  color: #eaebed;
+}
+
+.topnav a.active {
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+
+
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .accordion:hover {
+  background-color: #ccc;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  display: none;
+  overflow: hidden;
+}
+
+.panel p {
+  width: 80%;
+  margin: 0 auto; 
+  text-align: center;
+  margin-top: 10px;
+}
+
+.panel p:nth-child(1) {
+  line-height: 1.4;
+}
+
+.panel p:last-child {
+  margin-bottom: 10px;
+}
+
+/* Footer Section */
+
+.footer-container {
+  width: 100%;
+  background-color: rgb(135,195,233);
+  padding: 20px 0;
+}
+
+.link-list {
+  width: 40%;
+  margin: 0 auto;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.link-list h3, .link-list p {
+  color: #ffffff;
+}
+
+.link-icons {
+  margin: 10px 0;
+  text-align: center;
+}
+
+.link-icons a {
+  padding-right: 10px;
+}
+
+.link-icons i {
+  color: #ffffff;
+}
+
+.link-icons a:last-child {
+  padding-right: 0;
+}
+
+.copyright {
+  text-align: center;
+  font-size: 9px;
+}
+
+.copyright p {
+  padding-top: 10px;
+  color: #ffffff;
+}
+
+.main-content-wrapper {
+  padding-bottom: 40px;
+  margin-top: 20px;
+}
+
+.ditlCard {
+  text-align: center;
+  width: 90%;
+  margin: 0 auto;
+  background-color: rgba(135,195,233, .1);
+  line-height: 1.1;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.item a {
+  text-decoration: none;
+}
+
+.employee-spotlight {
+  text-align: center;
+  padding-top: 40px;
+  background-color: #6bc2cd;
+}
+
+.employee-spotlight h3 {
+  color: #ffffff;
+}
+
+
+.spotlight-btn {
+  margin-top: 20px;
+  width: 100%;
+  padding: 10px 0;
+  border-radius: 10px;
+  background-color: #6bc2cd;
+  color: #ffffff;
+  border: none;
+}
+
+.spotlight-btn:hover {
+  cursor: pointer;
+}
+
+.front-page-final-item {
+  background-color: #081d43;
+  text-align: center;
+  padding-top: 50%;
+}
+
+.front-page-final-item a h2 {
+  color: #ffffff !important;
+  line-height: 1.5;
+}
+
+.code-block {
+  border: 1px solid rgba(135,195,233, .1);
+}
+
+.code {
+  font-family: monospace;
+}
+
+.careers {
+  visibility: hidden !important;
+}

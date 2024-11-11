@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Login</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+	<link href="./assets/css/pure-css/set.css" rel="stylesheet" type="text/css">
+	<style>
+
+		* {
+			box-sizing: border-box;
+			font-family: 'Poppins Regular', sans-serif;
+		}
+
+		body {
+			background-color: #435165;
+		}
+
+		.login {
+			width: 400px;
+			background-color: #ffffff;
+			box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.3);
+			margin: 100px auto;
+		}
+
+		.login img {
+			width: 140px;
+			margin-left: 130px;
+		}
+
+		.login form {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			padding-top: 20px;
+		}
+
+		.login form label {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 50px;
+			height: 50px;
+			background-color: #5a9bc9;
+			color: #ffffff;
+		}
+
+		.login form input[type="password"], .login form input[type="text"] {
+			width: 310px;
+			height: 50px;
+			border: 1px solid #dee0e4;
+			margin-bottom: 20px;
+			padding: 0 15px;
+		}
+
+		.login form input[type="submit"] {
+			width: 100%;
+			padding: 15px;
+			margin-top: 20px;
+			background-color: #5a9bc9;
+			border: 0;
+			cursor: pointer;
+			font-weight: bold;
+			color: #ffffff;
+			transition: background-color 0.2s;
+		}
+
+		.login form input[type="submit"]:hover {
+			background-color: #001e43;
+			transition: background-color 0.2s;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="login">
+		<img src="./assets/images/White - Green.png" alt="CDS Logo">
+		<form action="php/authenticate.php" method="post">
+			<label for="username">
+				<i class="fas fa-user"></i>
+			</label>
+			<input type="text" name="username" placeholder="Username" id="username" required>
+			<label for="password">
+				<i class="fas fa-lock"></i>
+			</label>
+			<input type="password" name="password" placeholder="Password" id="password" required>
+			<input type="submit" value="Login">
+		</form>
+	</div>
+</body>
+</html>
